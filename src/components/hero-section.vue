@@ -1,8 +1,8 @@
 <template>
-  <div class="full-width full-height">
-    <div class="shape" />
+  <div class="box">
+    <div class="shape" :style="styleObjectShape" />
     <slot name="content">
-      <div class="content row q-gutter-y-md">
+      <div class="content row q-gutter-y-md" :style="styleObjectContent">
         <slot name="title-slot">
           <div class="title text-h2 col-12 q-mt-lg col-md-5 offset-md-1 col-sm-12">
             {{ title }}
@@ -17,7 +17,7 @@
         <div class="flex-break col-12"></div>
         <slot name="action-slot">
           <div class="action col-md-5 offset-md-1 col-sm-12">
-            <q-btn :label="buttonLabel" :color="buttonColor" /> 
+            <q-btn :label="buttonLabel" :color="buttonColor" @click="$emit('click')" /> 
           </div>
         </slot>
       </div>
@@ -27,12 +27,11 @@
 
 <script lang="ts">
 import {
-  defineComponent, PropType, computed, ref, toRef, Ref,
+  defineComponent, computed
 } from '@vue/composition-api';
-import { Todo, Meta } from './models';
 
 export default defineComponent({
-  name: 'CompositionComponent',
+  name: 'HeroSection',
   props: {
     title: {
       type: String,
@@ -54,18 +53,50 @@ export default defineComponent({
       required: false,
       default: 'primary'
     },
+    backgroundColor: {
+      type: String,
+      required: false,
+      default: null
+    },
+    backgroundImage: {
+      type: String,
+      required: false,
+      default: 'linear-gradient(50deg, #30cfd0 0%, #330867 100%)'
+    },
+    textColor: {
+      type: String,
+      required: false,
+      default: 'white'
+    },
   },
-  setup() {
-    return
+  setup(props) {
+    const styleObjectShape = computed(() => {
+      return {
+      backgroundImage: props.backgroundColor === null ? props.backgroundImage : '',
+      backgroundColor: props.backgroundColor
+      }
+    });
+
+    const styleObjectContent = computed(() => {
+      return {
+      color: props.textColor
+      }
+    });
+
+    return { styleObjectShape, styleObjectContent };
   },
 });
 </script>
 
 <style scoped>
+.box {
+  min-height: 800px;
+  max-height: 800px;
+}
+
 .content{
   width: 100%;
   max-height: 800px;
-  color: white;
   position: absolute;
   top: 0;
   left: 0;
@@ -80,8 +111,6 @@ export default defineComponent({
   top: 0;
   left: 0;
   z-index: -1;
-  opacity: 1;
-  background-image: linear-gradient(50deg, #30cfd0 0%, #330867 100%);
   -webkit-transform: skewY(-10deg);
   transform: skewY(-10deg);
   -webkit-transform-origin: 0;
@@ -94,6 +123,9 @@ export default defineComponent({
     padding: 10px;
   }
   .shape {
+    min-height: 600px;
+  }
+  .box {
     min-height: 600px;
   }
 }
