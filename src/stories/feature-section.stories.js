@@ -1,23 +1,31 @@
-<template>
-  <div>
-    <hero-section />
-    <feature-section
-      :features="features"
-      class="q-px-xl"
-     />
-  </div>
-</template>
+import FeatureSection from '../components/feature-section.vue';
+import Vue from 'vue'
+import VueCompositionApi from '@vue/composition-api'
 
-<script lang="ts">
-import HeroSection from 'components/hero-section.vue';
-import FeatureSection from 'components/feature-section.vue';
-import { defineComponent } from '@vue/composition-api';
+Vue.use(VueCompositionApi)
 
-export default defineComponent({
-  name: 'PageIndex',
-  components: { HeroSection, FeatureSection },
-  setup() {
-    const features = [
+export default {
+  title: 'Example/FeatureSection',
+  component: FeatureSection,
+  parameters: { actions: { argTypesRegex: '^on.*' } },
+  argTypes: {
+    features: { description: 'Content for features' },
+    numberPerRow: { control: 'number', description: 'Number of features per row' },
+    noHoverJump: { description: 'To disable the jump on Hover' }
+  },
+};
+
+const Template = (args, { argTypes }) => ({
+  props: Object.keys(argTypes),
+  components: { FeatureSection },
+  template: '<feature-section v-bind="$props" v-on="$listeners" />',
+});
+
+export const Primary = Template.bind({});
+Primary.args = {
+  numberPerRow: 4,
+  noHoverJump: null,
+  features: [
     {
       index: 1,
       title: 'Feature 1',
@@ -50,9 +58,5 @@ export default defineComponent({
       color: 'black',
       buttonLabel: 'More info...'
     }
-  ];
-
-  return { features };
-  }
-});
-</script>
+  ]
+};

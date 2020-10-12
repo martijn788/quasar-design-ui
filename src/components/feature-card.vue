@@ -68,7 +68,4 @@ export default defineComponent({
 </script>
 
 <style scoped>
-.q-card{
-  max-width: 300px;
-}
 </style>
