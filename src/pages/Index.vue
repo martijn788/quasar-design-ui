@@ -5,17 +5,22 @@
       :features="features"
       class="q-px-xl"
      />
+     <call-to-action
+        :img="img"
+      />
   </div>
 </template>
 
 <script lang="ts">
 import HeroSection from 'components/hero-section.vue';
 import FeatureSection from 'components/feature-section.vue';
+import CallToAction from 'components/call-to-action.vue';
 import { defineComponent } from '@vue/composition-api';
+import img from '../assets/parallax.jpg';
 
 export default defineComponent({
   name: 'PageIndex',
-  components: { HeroSection, FeatureSection },
+  components: { HeroSection, FeatureSection, CallToAction },
   setup() {
     const features = [
     {
@@ -52,7 +57,7 @@ export default defineComponent({
     }
   ];
 
-  return { features };
+  return { features, img };
   }
 });
 </script>
