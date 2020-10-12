@@ -5,7 +5,7 @@ import VueCompositionApi from '@vue/composition-api'
 Vue.use(VueCompositionApi)
 
 export default {
-  title: 'Example/FeatureSection',
+  title: 'ORGANISMS/FeatureSection',
   component: FeatureSection,
   parameters: { actions: { argTypesRegex: '^on.*' } },
   argTypes: {

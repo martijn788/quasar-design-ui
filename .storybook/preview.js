@@ -1,6 +1,9 @@
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
+  storySort: {
+  order: ['Example', 'MOLECULES', 'ORGANISMS'],
+  },
 }
 
 // Setup context for Storybook here

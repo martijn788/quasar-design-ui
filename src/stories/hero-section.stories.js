@@ -6,7 +6,7 @@ import heroSectionImage from './assets/hero-section-bg.jpg';
 Vue.use(VueCompositionApi)
 
 export default {
-  title: 'Example/HeroSection',
+  title: 'ORGANISMS/HeroSection',
   component: heroSection,
   parameters: { actions: { argTypesRegex: '^on.*' } },
   argTypes: {

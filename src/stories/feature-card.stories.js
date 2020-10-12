@@ -5,7 +5,7 @@ import VueCompositionApi from '@vue/composition-api'
 Vue.use(VueCompositionApi)
 
 export default {
-  title: 'Example/FeatureCard',
+  title: 'MOLECULES/FeatureCard',
   component: FeatureCard,
   parameters: { actions: { argTypesRegex: '^on.*' } },
   argTypes: {
