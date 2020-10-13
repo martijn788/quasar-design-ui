@@ -28,6 +28,7 @@ const Template = (args, { argTypes }) => ({
 export const imgParallax = Template.bind({});
 imgParallax.args = {
   // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
   img: parallaxImage,
 };
 

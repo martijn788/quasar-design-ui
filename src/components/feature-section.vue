@@ -1,6 +1,6 @@
 <template>
   <div class="row">
-    <div v-for="feature in features" class="q-pa-md" :class="rowClass">
+    <div v-for="feature in features" class="q-pa-md" :class="rowClass" :key="feature.id">
       <feature-card
         :title="feature.title"
         :description="feature.description"
@@ -43,7 +43,7 @@ export default defineComponent({
   setup(props) {
     const rowClass = computed(() => {
       const col = Math.round(12 / props.numberPerRow)
-      return 'col-md-' + col
+      return `col-md-${col}`
     });
 
     return { rowClass };

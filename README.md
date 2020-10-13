@@ -2,6 +2,14 @@
 
 A design package for quasar
 
+## Example
+
+[Example page](https://quasar-design-ui.dev)
+
+## Storybook
+
+[Storybook](https://quasar-design-ui.dev/storybook)
+
 ## Install the dependencies
 
 ```bash
