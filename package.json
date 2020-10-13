@@ -35,7 +35,8 @@
     "eslint-config-prettier": "^6.9.0",
     "eslint-loader": "^3.0.3",
     "eslint-plugin-vue": "^6.1.2",
-    "react-is": "^16.13.1"
+    "pug": "^3.0.0",
+    "pug-plain-loader": "^1.0.0"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"

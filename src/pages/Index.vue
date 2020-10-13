@@ -19,6 +19,14 @@
       />
      <team-section :team="team" />
      <faq />
+    <div class="flex flex-center">
+      <login-screen
+        route='/'
+        title='Testing the Login component'
+        subtitle='subtitle'
+        logoPath='https://cdn.quasar.dev/logo/svg/quasar-logo.svg'
+        />
+    </div>
   </div>
 </template>
 
@@ -29,6 +37,7 @@ import CallToAction from 'components/call-to-action.vue';
 import TeamSection from 'components/team-section.vue';
 import ImgText from 'components/img-text.vue';
 import Faq from 'components/faq.vue';
+import LoginScreen from 'components/login-screen'
 import { defineComponent } from '@vue/composition-api';
 
 export default defineComponent({
