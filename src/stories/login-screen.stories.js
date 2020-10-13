@@ -1,7 +1,6 @@
 import LoginScreen from '../components/login-screen.vue'
 import Vue from 'vue'
 import VueCompositionApi from '@vue/composition-api'
-// import logoImage from '../assets/quasar-logo-full.svg'
 
 Vue.use(VueCompositionApi)
 
