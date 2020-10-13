@@ -8,6 +8,14 @@
      <call-to-action
         :img="img"
       />
+    <div class="flex flex-center">
+      <login-screen
+        route='/'
+        title='Testing the Login component'
+        subtitle='subtitle'
+        logoPath='https://cdn.quasar.dev/logo/svg/quasar-logo.svg'
+        />
+    </div>
   </div>
 </template>
 
@@ -15,12 +23,13 @@
 import HeroSection from 'components/hero-section.vue';
 import FeatureSection from 'components/feature-section.vue';
 import CallToAction from 'components/call-to-action.vue';
+import LoginScreen from 'components/login-screen'
 import { defineComponent } from '@vue/composition-api';
 import img from '../assets/parallax.jpg';
 
 export default defineComponent({
   name: 'PageIndex',
-  components: { HeroSection, FeatureSection, CallToAction },
+  components: { HeroSection, FeatureSection, CallToAction, LoginScreen },
   setup() {
     const features = [
     {

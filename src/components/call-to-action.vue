@@ -5,7 +5,7 @@
         <img :src="img">
       </template>
 
-      <template v-slot:content="scope">
+      <template v-slot:content="">
         <div
           class="absolute row items-center full-width"
         >
