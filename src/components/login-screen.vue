@@ -65,11 +65,6 @@ export default {
     }
   },
   props: {
-    // route: {
-    //   type: String,
-    //   required: false,
-    //   default: '/'
-    // },
     title: {
       type: String,
       required: true,
