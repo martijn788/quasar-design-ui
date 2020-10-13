@@ -1,9 +1,8 @@
 <template lang="pug">
   q-card.row.items-center.q-pa-none.q-ma-none.shadow-24.custom-card-class
-    q-card-section.col-md-4.col-lg-4.col-sm-12.sol-xs-12.items-center.q-pa-md(
+    q-card-section.col-md-4.col-lg-4.col-sm-12.sol-xs-12.items-center.q-pa-md.custom-height-class(
       horizontal
-      :style="{ backgroundColor: background, height: $q.platform.is.desktop ? '700px' : 'auto' }"
-      style="background-color: #1f509e;")
+      :style="{ backgroundImage: background }")
       .text-center.full-width
         img.custom-cursor-pointer(:src="logoPath" style="width: 50%")
         .text-weight-bolder.text-white.text-h6 {{ title }}
@@ -85,6 +84,9 @@ export default {
       required: false,
       default: 'linear-gradient(50deg, #30cfd0 0%, #330867 100%)'
     }
+  },
+  mounted: function() {
+    console.log(this.background)
   }
 }
 </script>
@@ -96,5 +98,13 @@ export default {
 }
 .custom-cursor-pointer {
   cursor: pointer;
+}
+.custom-height-class {
+  height: 700px;
+}
+@media screen and (max-width: 1024px) {
+  .custom-height-class {
+    height: initial;
+  }
 }
 </style>
