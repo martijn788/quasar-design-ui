@@ -20,7 +20,6 @@ export default {
       control: 'color',
       description: 'Background-color'
     },
-    // route: { control: 'text', description: 'Route of the logo' }
   }
 }
 
@@ -37,32 +36,3 @@ Primary.args = {
     "The design system comes with four pre-built pages to help you get started faster. You can change the text and images and you're good to go.",
   logoPath: 'https://cdn.quasar.dev/logo/svg/quasar-logo.svg'
 }
-// export const imgBackground = Template.bind({})
-// imgBackground.args = {
-//   title: 'We bring technology to the people',
-//   description:
-//     "The design system comes with four pre-built pages to help you get started faster. You can change the text and images and you're good to go.",
-//   buttonLabel: 'More info...',
-//   buttonColor: 'primary',
-//   // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
-//   backgroundImage: `url(${heroSectionImage})`
-// }
-// export const colorBackground = Template.bind({})
-// colorBackground.args = {
-//   title: 'We bring technology to the people',
-//   description:
-//     "The design system comes with four pre-built pages to help you get started faster. You can change the text and images and you're good to go.",
-//   buttonLabel: 'More info...',
-//   buttonColor: 'primary',
-//   backgroundColor: 'blue'
-// }
-// export const gradientBackground = Template.bind({})
-// gradientBackground.args = {
-//   title: 'We bring technology to the people',
-//   description:
-//     "The design system comes with four pre-built pages to help you get started faster. You can change the text and images and you're good to go.",
-//   buttonLabel: 'More info...',
-//   buttonColor: 'primary',
-//   backgroundImage:
-//     'linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%)'
-// }
