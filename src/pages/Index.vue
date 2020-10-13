@@ -6,8 +6,9 @@
       class="q-px-xl"
      />
      <call-to-action
-        img="public/parallax.jpg"
+        :img="require('../assets/parallax.jpg')"
       />
+     <team-section :team="team" />
   </div>
 </template>
 
@@ -15,10 +16,12 @@
 import HeroSection from 'components/hero-section.vue';
 import FeatureSection from 'components/feature-section.vue';
 import CallToAction from 'components/call-to-action.vue';
+import TeamSection from 'components/team-section.vue';
 import { defineComponent } from '@vue/composition-api';
+
 export default defineComponent({
   name: 'PageIndex',
-  components: { HeroSection, FeatureSection, CallToAction },
+  components: { HeroSection, FeatureSection, CallToAction, TeamSection },
   setup() {
     const features = [
     {
@@ -55,7 +58,43 @@ export default defineComponent({
     }
   ];
 
-  return { features };
+      const team = [
+    {
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+      img: require('../assets/ano.jpg'),
+      name: 'John Johnson',
+      title: 'Developer',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      facebook: 'https://quasar-design-ui.dev',
+      twitter: 'https://quasar-design-ui.dev',
+      instagram: 'https://quasar-design-ui.dev',
+      github: 'https://quasar-design-ui.dev',
+    },
+    {
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+      img: require('../assets/ano2.jpg'),
+      name: 'John Johnson',
+      title: 'Developer',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      twitter: 'https://quasar-design-ui.dev'
+    },
+    {
+      name: 'John Johnson',
+      title: 'Developer',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      github: 'https://quasar-design-ui.dev'
+    },
+    {
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+      img: require('../assets/ano2.jpg'),
+      name: 'John Johnson',
+      title: 'Developer',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      instagram: 'https://quasar-design-ui.dev'
+    }
+  ];
+
+  return { features, team };
   }
 });
 </script>
