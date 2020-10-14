@@ -80,7 +80,7 @@ export default defineComponent({
     gradient: {
       type: String,
       required: false,
-      default: null
+      default: 'linear-gradient(to right, #30cfd0 0%, #330867 100%)'
     },
   },
   setup(props) {

@@ -10,36 +10,35 @@ A design package for quasar
 
 [Storybook](https://quasar-design-ui.dev/storybook)
 
-## Install the dependencies
+## Install the package
 
-```bash
 yarn
-```
-
-### Start the app in development mode (hot-code reloading, error reporting, etc.)
 
 ```bash
-quasar dev
+yarn add quasar-design-ui
 ```
 
-### Start the storybook-app
+npm
 
 ```bash
-yarn storybook
+npm install quasar-design-ui
 ```
 
-### Lint the files
+### use a components
 
-```bash
-yarn run lint
+```vue.js
+<template>
+  <div>
+    <hero-section />
+  </div>
+</template>
+
+<script lang="ts">
+import { HeroSection } from 'quasar-design-ui';
+
+export default {
+  name: 'PageIndex',
+  components: { HeroSection }
+};
+</script>
 ```
-
-### Build the app for production
-
-```bash
-quasar build
-```
-
-### Customize the configuration
-
-See [Configuring quasar.conf.js](https://quasar.dev/quasar-cli/quasar-conf-js).

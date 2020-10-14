@@ -1,11 +1,12 @@
 {
   "name": "quasar-design-ui",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "MIT",
   "description": "A design package for quasar",
   "productName": "Quasar design-UI",
   "author": "Martijn Gaasbeek",
-  "private": true,
+  "private": false,
+  "main": "src/quasar-design-ui.ts",
   "scripts": {
     "lint": "eslint --ext .js,.ts,.vue ./",
     "test": "echo \"No test specified\" && exit 0",
@@ -35,6 +36,9 @@
     "eslint-loader": "^3.0.3",
     "eslint-plugin-vue": "^6.1.2",
     "react-is": "^16.13.1"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
   },
   "browserslist": [
     "ie >= 11",
