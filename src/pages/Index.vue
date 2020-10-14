@@ -5,6 +5,15 @@
       :features="features"
       class="q-px-xl"
      />
+     <img-text
+      :img="require('../assets/img1.jpg')"
+      :features="['Easy to use', 'Free to use', 'Easy to change']"
+     />
+     <img-text
+       :img="require('../assets/img2.jpg')"
+       buttonLabel="Try it out!"
+       reverse
+     />
      <call-to-action
         :img="require('../assets/parallax.jpg')"
       />
@@ -17,11 +26,12 @@ import HeroSection from 'components/hero-section.vue';
 import FeatureSection from 'components/feature-section.vue';
 import CallToAction from 'components/call-to-action.vue';
 import TeamSection from 'components/team-section.vue';
+import ImgText from 'components/img-text.vue';
 import { defineComponent } from '@vue/composition-api';
 
 export default defineComponent({
   name: 'PageIndex',
-  components: { HeroSection, FeatureSection, CallToAction, TeamSection },
+  components: { HeroSection, FeatureSection, CallToAction, TeamSection, ImgText },
   setup() {
     const features = [
     {
