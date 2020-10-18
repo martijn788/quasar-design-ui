@@ -78,10 +78,6 @@ module.exports = configure(function (ctx) {
           exclude: /node_modules/
         })
         }
-        cfg.module.rules.push({
-          test: /\.pug$/,
-          loader: 'pug-plain-loader'
-        })
       },
     },
 

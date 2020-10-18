@@ -10,13 +10,13 @@
         </span>
       </slot>
       <q-list
-        :bordered="NoPopup"
+        :bordered="noPopup"
         class="border-rounded text-left"
       >
         <q-expansion-item
           v-for="(question, index) in questions"
           group="faq"
-          :popup="!NoPopup"
+          :popup="!noPopup"
           :label="question.question"
           expand-separator
           :key="index"
@@ -52,6 +52,7 @@ export default defineComponent({
     noPopup: {
       type: Boolean, 
       required: false,
+      default: null
     },
     questions: {
       type: Array, 

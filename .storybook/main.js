@@ -23,11 +23,6 @@ module.exports = {
       }
     });
 
-    config.module.rules.push({
-      test: /\.pug$/,
-      use: [{ loader: 'pug-plain-loader' }]
-    });
-
     // Return the altered config
     return config;
   }
