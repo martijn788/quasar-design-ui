@@ -33,7 +33,7 @@ import {
 import TeamCard from './team-card.vue';
 
 export default defineComponent({
-  name: 'featureSection',
+  name: 'teamSection',
   components: { TeamCard },
   props: {
     title: {

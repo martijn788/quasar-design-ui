@@ -18,6 +18,7 @@
         :img="require('../assets/parallax.jpg')"
       />
      <team-section :team="team" />
+     <faq />
   </div>
 </template>
 
@@ -27,11 +28,12 @@ import FeatureSection from 'components/feature-section.vue';
 import CallToAction from 'components/call-to-action.vue';
 import TeamSection from 'components/team-section.vue';
 import ImgText from 'components/img-text.vue';
+import Faq from 'components/faq.vue';
 import { defineComponent } from '@vue/composition-api';
 
 export default defineComponent({
   name: 'PageIndex',
-  components: { HeroSection, FeatureSection, CallToAction, TeamSection, ImgText },
+  components: { HeroSection, FeatureSection, CallToAction, TeamSection, ImgText, Faq },
   setup() {
     const features = [
     {
