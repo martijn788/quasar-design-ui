@@ -5,4 +5,5 @@ export { default as HeroSection } from './components/hero-section.vue';
 export { default as TeamCard } from './components/team-card.vue';
 export { default as TeamSection } from './components/team-section.vue';
 export { default as ImgText } from './components/img-text.vue';
-export { default as Faq } from './components/Faq.vue';
+export { default as Faq } from './components/faq.vue';
+export { default as LoginScreen } from './components/login-screen.vue'

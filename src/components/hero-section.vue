@@ -41,7 +41,7 @@ export default defineComponent({
     description: {
       type: String,
       required: false,
-      default: 'The design system comes with four pre-built pages to help you get started faster. You can change the text and images and you\'re good to go.'
+      default: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.'
     },
     buttonLabel: {
       type: String,
