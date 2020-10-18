@@ -1,6 +1,11 @@
 <template>
   <div class="row">
-    <div v-for="feature in features" class="q-pa-md" :class="rowClass" :key="feature.id">
+    <div
+      v-for="(feature, i) in features"
+      class="q-pa-md"
+      :class="rowClass"
+      :key="i"
+    >
       <feature-card
         :title="feature.title"
         :description="feature.description"
@@ -16,10 +21,8 @@
 </template>
 
 <script lang="ts">
-import {
-  defineComponent, computed
-} from '@vue/composition-api';
-import FeatureCard from './feature-card.vue';
+import { defineComponent, computed } from '@vue/composition-api'
+import FeatureCard from './feature-card.vue'
 
 export default defineComponent({
   name: 'featureSection',
@@ -27,7 +30,7 @@ export default defineComponent({
   props: {
     features: {
       type: Array,
-      required: true,
+      required: true
     },
     numberPerRow: {
       type: Number,
@@ -44,11 +47,11 @@ export default defineComponent({
     const rowClass = computed(() => {
       const col = Math.round(12 / props.numberPerRow)
       return `col-md-${col}`
-    });
+    })
 
-    return { rowClass };
-  },
-});
+    return { rowClass }
+  }
+})
 </script>
 
 <style scoped>
@@ -57,6 +60,6 @@ export default defineComponent({
   -ms-transform: translate(0px, -8px);
   -o-transform: translate(0px, -8px);
   -webkit-transform: translate(0px, -8px);
-  transform: translate(0px, -8px)
+  transform: translate(0px, -8px);
 }
 </style>

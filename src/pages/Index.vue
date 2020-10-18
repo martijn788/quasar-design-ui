@@ -19,6 +19,9 @@
       />
      <team-section :team="team" />
      <faq />
+    <div class="flex flex-center">
+      <login-screen />
+    </div>
   </div>
 </template>
 
@@ -29,11 +32,12 @@ import CallToAction from 'components/call-to-action.vue';
 import TeamSection from 'components/team-section.vue';
 import ImgText from 'components/img-text.vue';
 import Faq from 'components/faq.vue';
+import LoginScreen from 'components/login-screen.vue'
 import { defineComponent } from '@vue/composition-api';
 
 export default defineComponent({
   name: 'PageIndex',
-  components: { HeroSection, FeatureSection, CallToAction, TeamSection, ImgText, Faq },
+  components: { HeroSection, FeatureSection, CallToAction, TeamSection, ImgText, Faq, LoginScreen },
   setup() {
     const features = [
     {
