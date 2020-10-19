@@ -10,6 +10,10 @@ A design package for quasar
 
 [Storybook](https://quasar-design-ui.dev/storybook)
 
+## Documentation
+
+[Documentation](https://quasar-design-ui.dev/docs)
+
 ## Install the package
 
 yarn
@@ -34,11 +38,11 @@ npm install quasar-design-ui
 </template>
 
 <script lang="ts">
-import { HeroSection } from 'quasar-design-ui';
+import { HeroSection } from 'quasar-design-ui'
 
 export default {
   name: 'PageIndex',
   components: { HeroSection }
-};
+}
 </script>
 ```
