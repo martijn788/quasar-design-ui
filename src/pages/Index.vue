@@ -21,6 +21,7 @@
      <faq />
     <div class="flex flex-center">
       <login-screen />
+      <register-screen />
     </div>
   </div>
 </template>
@@ -33,11 +34,12 @@ import TeamSection from 'components/team-section.vue';
 import ImgText from 'components/img-text.vue';
 import Faq from 'components/faq.vue';
 import LoginScreen from 'components/login-screen.vue'
+import RegisterScreen from 'components/register-screen.vue'
 import { defineComponent } from '@vue/composition-api';
 
 export default defineComponent({
   name: 'PageIndex',
-  components: { HeroSection, FeatureSection, CallToAction, TeamSection, ImgText, Faq, LoginScreen },
+  components: { HeroSection, FeatureSection, CallToAction, TeamSection, ImgText, Faq, LoginScreen, RegisterScreen },
   setup() {
     const features = [
     {

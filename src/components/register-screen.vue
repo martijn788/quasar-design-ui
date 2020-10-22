@@ -8,24 +8,18 @@
     <template v-slot:form>
       <q-form class="q-gutter-md">
         <span class="text-subtitle1 text-weight-bold text-grey-7">
-          {{ loginTitle }}
+          {{ registerTitle }}
         </span>
         <q-input dense outlined v-model="username" :label="usernameLabel" aria-autocomplete="username" />
+        <q-input dense outlined v-model="email" :label="emailLabel" aria-autocomplete="email" />
         <q-input dense type="password" outlined v-model="password" :label="passwordLabel" aria-autocomplete="current-password" />
-        <q-checkbox class="text-grey-8" dense v-model="rememberMe" @click="rememberMe = !rememberMe" :label="rememberLabel" />
+        <q-input dense type="password" outlined v-model="passwordConfirmation" :label="passwordLabel" aria-autocomplete="current-password" />
         <div>
             <q-btn
               class="text-capitalize"
-              :label="loginLabel"
-              :color="loginColor"
-              @click="$emit('login', payload)"
-              />
-            <q-btn
-              class="float-right text-blue-9 text-capitalize"
-              outline
               :color="registerColor"
               :label="registerLabel"
-              @click="$emit('register')"
+              @click="$emit('register', payload)"
             />
         </div>
       </q-form>
@@ -38,43 +32,38 @@ import { defineComponent, computed } from '@vue/composition-api';
 import FormScreen from './form-screen.vue'
 
 export default defineComponent({
-  name: 'LoginScreen',
+  name: 'RegisterScreen',
   components: { FormScreen }, 
   props: {
     title: {
       type: String,
       required: false,
-      default: 'Login'
+      default: 'Register'
     },
     subtitle: {
       type: String,
       required: false,
-      default: 'Enter username and password'
+      default: 'Enter personal information'
     },
-    loginTitle: {
+    registerTitle: {
       type: String,
       required: false,
-      default: 'Sign in'
+      default: 'Sign up'
     },
     usernameLabel: {
       type: String,
       required: false,
       default: 'Username'
     },
+    emailLabel: {
+      type: String,
+      required: false,
+      default: 'E-mail'
+    },
     passwordLabel: {
       type: String,
       required: false,
       default: 'Password'
-    },
-    loginLabel: {
-      type: String,
-      required: false,
-      default: 'Login'
-    },
-    loginColor: {
-      type: String,
-      required: false,
-      default: 'primary'
     },
     registerLabel: {
       type: String,
@@ -85,11 +74,6 @@ export default defineComponent({
       type: String,
       required: false,
       default: 'primary'
-    },
-    rememberLabel: {
-      type: String,
-      required: false,
-      default: 'Remember me'
     },
     logo: {
       type: String,
@@ -103,18 +87,20 @@ export default defineComponent({
     }
   },
   setup() {
-    const rememberMe = false
+    const email = ''
     const password = ''
+    const passwordConfirmation = ''
     const username = ''
     const payload = computed(() => {
       return {
         username,
         password,
-        rememberMe
+        email, 
+        passwordConfirmation
       }
     });
 
-    return { rememberMe, password, username, payload };
+    return { email, password, username, passwordConfirmation, payload };
   },
 });
 </script>
